@@ -39,5 +39,6 @@ console.log(cars);
 
 let cars = ["BMW", "Volvo", "Benz", "Rolls Royce", "Breeza"];
 cars.slice(1,3);
+console.log(cars.slice());
 console.log(cars);
 
