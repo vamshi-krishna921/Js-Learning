@@ -35,3 +35,16 @@ console.log(months);
 let Delete = months.indexOf("June");
 months.splice(Delete,1);
 console.log(months);
+
+
+//TODO Find and FindIndex method
+
+const num2= [1,2,3,6,4,5,6,7,8,9,0];
+let find = num2.find((curElem) => {
+    return curElem > 5;
+});
+let find1 = num2.findIndex((curElem) => {
+    return curElem > 5;
+});
+console.log(find)// 6
+console.log(find1)// 3
