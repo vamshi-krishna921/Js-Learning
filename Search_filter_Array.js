@@ -48,3 +48,13 @@ let find1 = num2.findIndex((curElem) => {
 });
 console.log(find)// 6
 console.log(find1)// 3
+
+
+//? Filter Method
+
+const wholeNums = [1,2,3,4,5,4,5,6,7,8,9,9]
+let value = 4;
+let FilterValue = wholeNums.filter((curElem) => {
+    return curElem === value;
+});
+console.log(FilterValue);// [4,4]
