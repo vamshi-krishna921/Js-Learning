@@ -11,8 +11,21 @@ console.log(solarSystem);//The solar system has '6' planets .
                   
 //! Searching in strings                         
 
+//TODO indexOf()
 const Name = "vamshi krihsna"
 console.log(Name.length);//14
 console.log(Name.indexOf(k,0));// 7
 
+//TODO LastIndexOf()
+//TODO Search()
+let text = `Jai shree Ram`
+console.log(text.search(/ram/i)); //10
 
+//TODO match()
+let txt = `Jai shree Ram`
+console.log(txt.match("Ram")); // [ 'Ram', index: 10, input: 'Jai shree Ram', groups: undefined ]
+console.log(text.match(/Ram/g)); // [ 'Ram', 'Ram' ]
+
+//! Converting string to array
+let Naam = "Vamshi"
+console.log(Array.from(Naam));//[ 'V', 'a', 'm', 's', 'h', 'i' ]
