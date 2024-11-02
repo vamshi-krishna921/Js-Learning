@@ -40,3 +40,11 @@ console.log(crct); // true
 let txt2 = `Jai shree Ram`;
 console.log(txt2.startsWith("Jai")); // true
 console.log(txt2.endsWith("m")); // true
+
+//! Extracting string parts 
+
+let txt3 = "Jai shree Ram";
+console.log(txt3.slice(4)); // shree Ram
+console.log(txt3.slice(4,9)); //shree 
+
+
