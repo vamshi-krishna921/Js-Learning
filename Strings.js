@@ -28,4 +28,15 @@ console.log(text.match(/Ram/g)); // [ 'Ram', 'Ram' ]
 
 //! Converting string to array
 let Naam = "Vamshi"
-console.log(Array.from(Naam));//[ 'V', 'a', 'm', 's', 'h', 'i' ]
+console.log(Array.from(Naam));// [ 'V', 'a', 'm', 's', 'h', 'i' ]
+
+//TODO includes()
+
+let txt1 = `Jai shree Ram`;
+let crct = txt1.includes("shree");
+console.log(crct); // true
+
+//TODO startsWith() and endsWith()
+let txt2 = `Jai shree Ram`;
+console.log(txt2.startsWith("Jai")); // true
+console.log(txt2.endsWith("m")); // true
