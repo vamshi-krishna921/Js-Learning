@@ -43,8 +43,15 @@ console.log(txt2.endsWith("m")); // true
 
 //! Extracting string parts 
 
+// TODO slice()
+
 let txt3 = "Jai shree Ram";
 console.log(txt3.slice(4)); // shree Ram
 console.log(txt3.slice(4,9)); //shree 
 
+//TODO substring()
 
+let txt4 = "Jai shree Ram";
+console.log(txt3.slice(-1)); // m
+console.log(txt3.substring(-1)); // Jai shree Ram
+console.log(txt3.substring(4,9)); // shree
