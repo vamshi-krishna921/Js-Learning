@@ -82,8 +82,38 @@ console.log(text3.at(-5)); // e
 //TODO replace()
 
 let text4 = "Jai shree Ram";
-let newText = text4.replace("Ram","krishna");
-let newText1 = text4.replace(/ram/i,"krishna"); 
+let newText = text4.replace("Ram", "krishna");
+let newText1 = text4.replace(/ram/i, "krishna");
 console.log(newText); // Jai shree krishna
 console.log(newText1); // Jai shree krishna
 console.log(newText1); // Jai shree Ram
+
+//!other methods()
+
+// TODO toUpperCase() and toLowerCase()
+
+let string = "Vamshi Krishna";
+console.log(string.toUpperCase()); // VAMSHI KRISHNA
+console.log(string.toLowerCase()); // vamshi krishna
+
+//TODO trim()
+
+let string1 = "   Hello, Wolrd   ";
+console.log(string1); //   Hello, Wolrd
+console.log(string1.trim()); //Hello, Wolrd
+
+// TODO split()
+
+let string2 = "Hello, World";
+console.log(string2.split("")); // ['H', 'e', 'l', 'l','o', ',', ' ', 'W', 'o', 'r', 'l', 'd']
+console.log(string2.split()); // [ 'Hello, World' ]
+console.log(string2.split(",")); // [ 'Hello', ' World' ]
+
+//* Reverse string using split
+
+console.log(string2.split(",").reverse()); // [ ' World', 'Hello' ]
+
+//* Joining / Converting array to string 
+//TODO join()
+
+console.log(string.split(",").reverse().join()); //  World,Hello
