@@ -115,3 +115,17 @@ console.log(string2.split(",").reverse()); // [ ' World', 'Hello' ]
 //TODO join()
 
 console.log(string.split(",").reverse().join()); //  World,Hello
+
+//! String Questions
+//? 1. Print A to Z letters 
+
+console.log("A".charCodeAt()); // 65 (To know the ASCII value of A)
+console.log("Z".charCodeAt()); // 90 (To know the ASCII value of Z)
+let line = ""
+for(let i = 65; i<=90 ; i++)
+{   
+    line = line + String.fromCharCode(i);
+    line = line + " ";
+}
+console.log(line); // A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+
