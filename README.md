@@ -1,3 +1,4 @@
+strings.js,
 ArrayMethods.js,
 Arrays.js,
 Fatarrow.js,
