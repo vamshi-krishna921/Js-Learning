@@ -111,21 +111,56 @@ console.log(string2.split(",")); // [ 'Hello', ' World' ]
 
 console.log(string2.split(",").reverse()); // [ ' World', 'Hello' ]
 
-//* Joining / Converting array to string 
+//* Joining / Converting array to string
 //TODO join()
 
 console.log(string.split(",").reverse().join()); //  World,Hello
 
 //! String Questions
-//? 1. Print A to Z letters 
+//? 1. Print A to Z letters
 
 console.log("A".charCodeAt()); // 65 (To know the ASCII value of A)
 console.log("Z".charCodeAt()); // 90 (To know the ASCII value of Z)
-let line = ""
-for(let i = 65; i<=90 ; i++)
-{   
-    line = line + String.fromCharCode(i);
-    line = line + " ";
+let line = "";
+for (let i = 65; i <= 90; i++) {
+  line = line + String.fromCharCode(i);
+  line = line + " ";
 }
-console.log(line); // A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+console.log(line); // A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
+//? A function to check all vowels are present in string or not;
+
+let message = "Hi, How are you?";
+const checkAllVowels = (str) => {
+  const vowels = "aeiou";
+  let count = 0;
+  // console.log(vowels);
+  for (let char of vowels) {
+    // console.log(str.includes(char));
+    if (str.includes(char) === true) {
+      count++;
+    }
+  }
+  if (count === vowels.length) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(checkAllVowels(message)); // true
+
+///                OR                  ///
+
+let msg = "Hi, How are you?";
+const checkForVowels = (str) => {
+  const vowels = "aeiou";
+  // console.log(vowels);
+  for (let char of vowels) {
+    // console.log(str.includes(char));
+    if (!str.includes(char)) {
+      return false;
+    }
+  }
+  return true;
+};
+console.log(checkForVowels(msg)); // true
