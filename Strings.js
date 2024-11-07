@@ -166,3 +166,20 @@ const checkForVowels = (str) => {
   return true;
 };
 console.log(checkForVowels(msg)); // true
+
+//? count the no of vowels in a string 
+
+let mesg = "Hello Hello mic testing aaa";
+const countAllVowels = (str) => {
+  const vowels = "aeiou";
+  let count = 0;
+  // console.log(vowels);
+  for (let char of str) {
+    // console.log(str.includes(char));
+    if (vowels.includes(char) === true) {
+      count++;
+    }
+  }
+ return count;
+};
+console.log(countAllVowels(mesg)); // 10
