@@ -181,3 +181,28 @@ const countAllVowels = (str) => {
  return count;
 };
 console.log(countAllVowels(mesg)); // 10
+
+//?  JavaScript function isPangram that takes a string as input
+//? and returns true if the string is a pangram (contains all letters of
+//?  the alphabet) and false otherwise
+
+let pangramText = "The quick brown fox jumps over the lazy dog:";
+let Rmdup;
+const isPangram = (str )=> {
+    string = str.toLowerCase().split("");
+    console.log(string); // ['t', 'h', 'e', ' ', 'q', 'u', 'i','c', 'k', ' ', 'b', 'r', 'o', 'w','n', ' ', 'f', 'o', 'x', ' ', 'j','u', 'm', 'p', 's', ' ', 'o', 'v','e', 'r', ' ', 't', 'h', 'e', ' ','l', 'a', 'z', 'y', ' ', 'd', 'o','g', ':']
+    let values = string.filter((curElem) => {
+        return curElem.charCodeAt() >= 97  && curElem.charCodeAt() <= 122
+    });
+    console.log(values) //['t', 'h', 'e', 'q', 'u', 'i', 'c','k', 'b', 'r', 'o', 'w', 'n', 'f','o', 'x', 'j', 'u', 'm', 'p', 's','o', 'v', 'e', 'r', 't', 'h', 'e','l', 'a', 'z', 'y', 'd', 'o', 'g']
+    Rmdup = [...new Set(values)];
+    console.log(Rmdup); // ['t', 'h', 'e', 'q', 'u', 'i','c', 'k', 'b', 'r', 'o', 'w','n', 'f', 'x', 'j', 'm', 'p','s', 'v', 'l', 'a', 'z', 'y','d', 'g']
+    if(Rmdup.length === 26)
+    {
+        return true;
+    }
+    else
+    return false;
+}
+
+console.log(isPangram(pangramText)); // true
