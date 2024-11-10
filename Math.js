@@ -39,8 +39,8 @@ console.log(Math.trunc(-3.3)); // -3
 
 //TODO Math.pow()
 
-console.log(Math.pow(2,3)); // 8
-console.log(Math.pow(6,2)); // 36
+console.log(Math.pow(2, 3)); // 8
+console.log(Math.pow(6, 2)); // 36
 
 //TODO Math.sqrt()
 
@@ -59,21 +59,34 @@ console.log(Math.log2(8)); // 3
 console.log(Math.random()); // 0.48436115487772535
 console.log(Math.round(Math.random())); // 8
 
-//? Guess the number game 
+//? Guess the number game
 
-let number = parseFloat(prompt("Enter your max number by which the between you have to guess : "));
-let roundNum = parseInt(Math.round(Math.random() * number + 1));
+let number = parseFloat(
+  prompt("Enter your max number by which the between you have to guess : ")
+);
+let randomNum = parseInt(Math.round(Math.random() * number + 1));
 let guessNum = parseInt(prompt("Enter your guessed number : "));
-while(true){
-    if(guessNum === "quit"){
-        console.log("Exit");
-        break;
-    }
-    else if (guessNum === roundNum){
-        console.log("Congrajulations 🎉 You are correct. The number is : ",guessNum);
-        break;
-    }
-    else {
-        guessNum = parseInt(prompt("Please try again. Enter the number : "));
-    }
+while (true) {
+  if (guessNum === "quit") {
+    console.log("Exit");
+    break;
+  } else if (guessNum === randomNum) {
+    console.log(
+      "Congrajulations 🎉 You are correct. The number is : ",
+      guessNum
+    );
+    break;
+  } else if (guessNum < randomNum) {
+    guessNum = parseInt(
+      prompt(
+        " hint : Please try again. Your random number is too small to the guessed number : "
+      )
+    );
+  } else {
+    guessNum = parseInt(
+      prompt(
+        " hint : Please try again. Your random number is too large to the guessed number : "
+      )
+    );
+  }
 }
