@@ -59,4 +59,21 @@ console.log(Math.log2(8)); // 3
 console.log(Math.random()); // 0.48436115487772535
 console.log(Math.round(Math.random())); // 8
 
+//? Guess the number game 
 
+let number = parseFloat(prompt("Enter your max number by which the between you have to guess : "));
+let roundNum = parseInt(Math.round(Math.random() * number + 1));
+let guessNum = parseInt(prompt("Enter your guessed number : "));
+while(true){
+    if(guessNum === "quit"){
+        console.log("Exit");
+        break;
+    }
+    else if (guessNum === roundNum){
+        console.log("Congrajulations 🎉 You are correct. The number is : ",guessNum);
+        break;
+    }
+    else {
+        guessNum = parseInt(prompt("Please try again. Enter the number : "));
+    }
+}
