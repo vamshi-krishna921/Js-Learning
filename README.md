@@ -1,3 +1,4 @@
+Math_Object.js
 strings.js,
 ArrayMethods.js,
 Arrays.js,
