@@ -172,18 +172,24 @@ console.log(window.screen.pixelDepth); // 24
 // previousSibling / previousElementSibling
 // closest(selector)
 // forEach (Array.from)
+*/
+//* ==============================
+//* DOM Navigation (used chatgpt interface (or) landing page)
+//* ==============================
 
-//* ==============================
-//* DOM Navigation
-//* ==============================
+//TODO Every property/method has 2 versions, the one is node property and the other is element property.
 
 //? document represents the entire document
 // console.log(document);
 
 //? Document.documentElement returns the Element that is the root element of the document (for example, the <html> element for HTML documents).
+console.log(document.documentElement);
 
 //? parentNode / parentElement:
 // Navigate to the parent node or element.
+
+console.log(document.parentElement); // NULL
+console.log(document.parentNode); // NULL
 
 // Document and DocumentFragment nodes can never have a parent, so parentNode will always return null. It also returns null if the node has just been created and is not yet attached to the tree.
 
@@ -192,23 +198,49 @@ console.log(window.screen.pixelDepth); // 24
 
 // childNodes is a property that returns a NodeList containing all child nodes of a given element, including text nodes and comment nodes.
 
+console.log(document.childNodes); // NodeList(2) [<!DOCTYPE html>, html.dark]
+console.log(document.head.childNodes); // NodeList(62) [meta, meta, link, meta, meta, meta, link, link, link, link, title, meta, meta, meta, meta, meta, meta, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, link, style, link, link, link, link, link, link, link, link, link, link, link, link, link, link]
+
+// children is a property that returns a NodeList containing all child nodes of a given element, excluding text nodes and comment nodes.It gives the nodes of HTML collection.
+
+console.log(document.children); // HTMLCollection [html.dark]
+console.log(document.body.children); // HTMLCollection(10) [script, span.hidden, div.relative.flex.h-full.w-full.overflow-hidden.transition-colors.z-0, div.sr-only, div.sr-only, audio.fixed.bottom-0.left-0.hidden.h-0.w-0, span.pointer-events-none.fixed.inset-0.z-[60].mx-auto.my-2.flex.max-w-[560px].flex-col.items-stretc…, script, script, iframe]
+
 //? firstChild / firstElementChild:
 // Navigate to the first child node or element.
+
+console.log(document.body.firstChild); // <script>...</script>
+console.log(document.body.firstElementChild);  // <script>...</script>
 
 //todo The Element suffix in firstElementChild and similar properties signifies that only element nodes are considered.
 
 //? lastChild / lastElementChild:
 // Navigate to the last child node or element.
 
+console.log(document.body.lastChild); // <iframe>/...</iframe>
+
+console.log(document.body.lastElementChild); // <iframe>/...</iframe>
+
 //? nextSibling / nextElementSibling:
 // Navigate to the next sibling node or element.
+console.log(document.body.firstElementChild.nextElementSibling); // <span>...</span>
+
+console.log(document.body.lastElementChild.nextElementSibling); // NULL 
 
 //? previousSibling / previousElementSibling:
 // Navigate to the previous sibling node or element.
 
+console.log(document.body.firstElementChild.nextElementSibling.previousElementSibling); // <script>...</script>
+
+console.log(document.body.lastElementChild.nextElementSibling.previousElementSibling); // VM2962:1 Uncaught TypeError: Cannot read properties of null (reading 'previousElementSibling')
+
+console.log(document.body.firstElementChild.nextElementSibling.nextElementSibling.previousElementSibling); // <span>...</span>
+
+console.log(document.body.firstElementChild.nextElementSibling.previousElementSibling.parentElement); // <body>..</body>
+
 //? closest(selector):
 // Find the closest ancestor of the current element that matches a given selector.
-
+/*
 //* ==============================
 //* DOM Filtering
 //* ==============================
