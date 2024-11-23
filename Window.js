@@ -155,7 +155,7 @@ console.log(window.screen.pixelDepth); // 24
 // innerHTML
 // textContent
 // style
-
+/*
 //! DOM Methods:
 // createElement(tagName)
 // appendChild(node)
@@ -172,7 +172,7 @@ console.log(window.screen.pixelDepth); // 24
 // previousSibling / previousElementSibling
 // closest(selector)
 // forEach (Array.from)
-
+*/
 //* ==============================
 //* DOM Navigation (used chatgpt interface (or) landing page)
 //* ==============================
@@ -268,7 +268,7 @@ console.log(document.body.firstElementChild.nextElementSibling.previousElementSi
 //? querySelector(selector): Find the first element that matches the specified CSS selector.
 
 //? querySelectorAll(selector): Find all elements that match the specified CSS selector.
-
+/*
 //* ============================================
 //* DOM - CRUD (Create, Read, Update, Delete):
 //* ============================================
@@ -302,3 +302,4 @@ console.log(document.body.firstElementChild.nextElementSibling.previousElementSi
 //* When you use the browser's developer tools console to select an element and change its text content using JavaScript, you are directly manipulating the DOM object in memory. Since the DOM is a live representation of the document, any changes you make to the DOM objects are immediately reflected in the rendered web page.
 
 //* However, these changes are typically temporary and exist only in the current session. When you refresh the page or navigate away, the browser reloads the original HTML document from the server, and the DOM is reconstructed during the parsing process. Any modifications made to the DOM objects during the previous session are lost, and the page reverts to its original state. 
+*/
