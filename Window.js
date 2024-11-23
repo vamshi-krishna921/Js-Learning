@@ -141,7 +141,7 @@ console.log(window.screen.pixelDepth); // 24
 
 //? Document type node: A document type node, such as <! DOCTYPE html>.
 
-/*
+
 //* ==============================
 //* DOM Properties and Methods
 //* ==============================
@@ -155,7 +155,7 @@ console.log(window.screen.pixelDepth); // 24
 // innerHTML
 // textContent
 // style
-
+/*
 //! DOM Methods:
 // createElement(tagName)
 // appendChild(node)
@@ -240,7 +240,7 @@ console.log(document.body.firstElementChild.nextElementSibling.previousElementSi
 
 //? closest(selector):
 // Find the closest ancestor of the current element that matches a given selector.
-/*
+
 //* ==============================
 //* DOM Filtering
 //* ==============================
@@ -268,7 +268,7 @@ console.log(document.body.firstElementChild.nextElementSibling.previousElementSi
 //? querySelector(selector): Find the first element that matches the specified CSS selector.
 
 //? querySelectorAll(selector): Find all elements that match the specified CSS selector.
-
+/*
 //* ============================================
 //* DOM - CRUD (Create, Read, Update, Delete):
 //* ============================================
