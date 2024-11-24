@@ -54,6 +54,28 @@
         console.log(elem.textContent); //  1 2 3
         console.log(elem.innerText); //  1 2 3
       }
+
+      // getElementByTagName
+
+      let tagName = document.getElementsByTagName("li");
+      for (const tag of tagName) {
+        console.log(tag); // <li>1</li> <li>2</li> <li>3</li>
+      }
+
+      // querySelector
+
+      let querySelector = document.querySelector("#heading");
+      console.log(querySelector); // <h1 id="heading">DOM Searching</h1>
+      console.log(querySelector.innerText= "DOM Searching"); // DOM Searching
+      
+      // querySelectorAll
+
+      let querySelectorAll = document.querySelectorAll("li")
+      console.log(querySelectorAll); // NodeList(3) [li, li, li]
+      for (const element of querySelectorAll) {
+        console.log(element.innerText); // 1 2 3 
+      }
+      
     </script>
   </body>
 </html>
