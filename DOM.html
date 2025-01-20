@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Searching</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="heading">DOM Manipulation</h1>
+      <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <div class="color">Pink</div>
+    </div>
+    <div id="box">
+      <div class="outer">
+        Outer box
+        <div ="inner">Inner box</div>
+      </div>
+    </div>
+    <script>
+      // ID = heading
+
+      let findID = document.getElementById("heading");
+      console.log(findID); // <h1 id="heading">DOM Manipulation</h1>
+      console.log(findID.innerHTML); // DOM Manipulation
+      console.log(findID.innerText); // DOM Manipulation
+      console.log(findID.textContent); // DOM Manipulation
+
+      // ID = box
+
+      let findID1 = document.getElementById("box");
+      console.log(findID1); // <div id="box"><div class="outer"> Outer box<div ="inner">Inner box</div></div</div>
+      console.log(findID1.innerHTML); // <div class="outer">  Outer box  <div ="inner"="">Inner box</div></div>
+      console.log(findID1.innerText); // Outer box Inner box
+      console.log(findID1.textContent); // Outer box Inner box
+
+      // className = list
+
+      let findClassName = document.getElementsByClassName("list");
+      console.log(findClassName); // HTMLCollection [ul.list] (It shows collection because class(list) is a node in which it has a parent node and it also a parent node which also has child nodes. To get the data inside it we have to use spread() operator(...) )
+
+      // We are using spread operator because getElementsByClassName() is iterable.
+      console.log(...findClassName); // <ul class="list"> <li>1</li> <li>2</li> <li>3</li> </ul>
+      console.log(findClassName.innerHTML); // undefined
+      console.log(findClassName.innerText); // undefined
+      console.log(findClassName.textContent); // undefined
+      // To get text inside it (or) inner html we must use iterable loop.
+      for (const elem of findClassName) {
+        console.log(elem.innerHTML); //  <li>1</li> <li>2</li> <li>3</li>
+        console.log(elem.textContent); //  1 2 3
+        console.log(elem.innerText); //  1 2 3
+      }
+
+      // getElementByTagName
+
+      let tagName = document.getElementsByTagName("li");
+      for (const tag of tagName) {
+        console.log(tag); // <li>1</li> <li>2</li> <li>3</li>
+      }
+
+      // querySelector
+
+      let querySelector = document.querySelector("#heading");
+      console.log(querySelector); // <h1 id="heading">DOM Searching</h1>
+      console.log(querySelector.innerText= "DOM Searching"); // DOM Searching
+      
+      // querySelectorAll
+
+      let querySelectorAll = document.querySelectorAll("li")
+      console.log(querySelectorAll); // NodeList(3) [li, li, li]
+      for (const element of querySelectorAll) {
+        console.log(element.innerText); // 1 2 3 
+      }
+      
+    </script>
+  </body>
+</html>
