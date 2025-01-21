@@ -39,3 +39,34 @@ const curMilliSeconds = new Date().getTime();
 console.log(curMilliSeconds);
 date = new Date(curMilliSeconds);
 console.log(date);
+
+//? Get Date object
+
+//* getFullYear()
+date = new Date();
+console.log(date.getFullYear()); // 2025
+
+//* getMonth()
+console.log(date.getMonth()); // 0(Jan)
+
+//* getDay()
+console.log(date.getDay()); // 2(Tue)
+
+//* getDate()
+console.log(date.getDate()); // 21
+
+//* getTime()
+console.log(date.getTime()); // 1737468491785
+
+//* getHours()
+console.log(date.getHours()); // 21
+
+//* getMinutes()
+console.log(date.getMinutes()); // 20
+
+//* getSeconds()
+console.log(date.getSeconds()); // 48
+
+//* getMilliseconds()
+console.log(date.getMilliseconds()); // 894
+
