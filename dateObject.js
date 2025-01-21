@@ -70,3 +70,4 @@ console.log(date.getSeconds()); // 48
 //* getMilliseconds()
 console.log(date.getMilliseconds()); // 894
 
+//? set Date object
