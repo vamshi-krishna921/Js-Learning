@@ -102,3 +102,19 @@ date.getMilliseconds(500), console.log(date); // Tue Jul 15 2025 14:45:50 GMT+05
 //* setTime(ms)
 date.setTime(173744640000);
 console.log(date); // Sat Jul 05 1975 03:54:00 GMT+0530 (India Standard Time)
+
+//? localString methods in Date Object
+
+//* toLocaleString()
+
+let localString = date.toLocaleString();
+console.log(localString); // 7/5/1975, 3:54:00 AM
+
+//* toLocaleDateString
+
+let localDate = date.toLocaleDateString();
+console.log(localDate); // 7/5/1975
+
+//* toLocalTimeString()
+let localTime = date.toLocaleTimeString();
+console.log(localTime); // 4:14:55 AM
