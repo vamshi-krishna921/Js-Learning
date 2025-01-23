@@ -1,6 +1,6 @@
 //* new Date()
-const curDate = new Date();
-console.log(curDate); // Tue Jan 21 2025 05:02:10 GMT+0530 (India Standard Time)
+const Date = new Date();
+console.log(Date); // Tue Jan 21 2025 05:02:10 GMT+0530 (India Standard Time)
 
 //* new Date(date string)
 var date = new Date("2013-11-25");
@@ -118,3 +118,16 @@ console.log(localDate); // 7/5/1975
 //* toLocalTimeString()
 let localTime = date.toLocaleTimeString();
 console.log(localTime); // 4:14:55 AM
+
+//! Date object questions
+//? Write a function to add 10 days to a given date?
+let curDate = new Date("2025-01-24");
+const addDate = (date, addingDate) => {
+  let getDate = date.getDate();
+  let modDate = date.setDate(getDate + addingDate);
+  return new Date(modDate);
+  
+  
+};
+let newDate = addDate(curDate, 10);
+console.log(newDate); // Mon Feb 03 2025 05:30:00 GMT+0530 (India Standard Time)
