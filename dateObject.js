@@ -130,4 +130,14 @@ const addDate = (date, addingDate) => {
   
 };
 let newDate = addDate(curDate, 10);
-console.log(newDate); // Mon Feb 03 2025 05:30:00 GMT+0530 (India Standard Time)
+console.log(newDate.toLocaleDateString()); // Mon Feb 03 2025 05:30:00 GMT+0530 (India Standard Time)
+
+//? Write a program to calculate the days between 2 dates?
+
+let date1 = new Date ("2025-01-24");
+let date2 = new Date ("2025-03-24");
+let diff = Math.abs(date2 - date1);
+let oneDayMs = 24 * 60 * 60 * 1000;
+console.log(Math.floor(diff / oneDayMs)); // 59
+
+
