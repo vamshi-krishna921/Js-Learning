@@ -71,3 +71,34 @@ console.log(date.getSeconds()); // 48
 console.log(date.getMilliseconds()); // 894
 
 //? set Date object
+
+//* setFullYear(year, month, day)
+date.setFullYear(2025, 1, 21);
+console.log(date); // Fri Feb 21 2025 03:44:06 GMT+0530 (India Standard Time)
+
+//* setMonth(month, day)
+date.setMonth(6);
+console.log(date); // Mon Jul 21 2025 03:44:06 GMT+0530 (India Standard Time)
+
+//* setDate(day)
+date.setDate(15);
+console.log(date); // Tue Jul 15 2025 03:44:06 GMT+0530 (India Standard Time)
+
+//* setHours(hours, minutes, seconds, milliseconds)
+date.setHours(14, 30, 0, 0);
+console.log(date); // Tue Jul 15 2025 14:30:00 GMT+0530 (India Standard Time)
+
+//* setMinutes(minutes, seconds, milliseconds)
+date.setMinutes(45, 30, 500);
+console.log(date); // Tue Jul 15 2025 14:45:30 GMT+0530 (India Standard Time)
+
+//* setSeconds(seconds, milliseconds)
+date.setSeconds(50, 250);
+console.log(date); // Tue Jul 15 2025 14:45:50 GMT+0530 (India Standard Time)
+
+//* setMilliseconds(ms)
+date.getMilliseconds(500), console.log(date); // Tue Jul 15 2025 14:45:50 GMT+0530 (India Standard Time)
+
+//* setTime(ms)
+date.setTime(173744640000);
+console.log(date); // Sat Jul 05 1975 03:54:00 GMT+0530 (India Standard Time)
