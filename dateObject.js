@@ -139,5 +139,3 @@ let date2 = new Date ("2025-03-24");
 let diff = Math.abs(date2 - date1);
 let oneDayMs = 24 * 60 * 60 * 1000;
 console.log(Math.floor(diff / oneDayMs)); // 59
-
-
