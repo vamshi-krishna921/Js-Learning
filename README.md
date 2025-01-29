@@ -19,5 +19,5 @@ strconcat.js,
 stringrev.js,
 sumFunctions.js,
 var,let,const.js,
-dateObject.js
+dateObject.js,
 Objects
