@@ -22,3 +22,15 @@ let person = {
      }
     };
 person.show();
+
+//* Accessing keys in objects
+console.log(Object.keys(persons)); //  ['name', 'place', 'class']
+
+//* Changing key names
+  let keys = Object.keys(persons);
+  let oldKey = keys[1];
+  let newKey = "location";
+  persons[newKey] = persons[oldKey];
+  delete persons[oldKey];
+  console.log(persons); // {name: 'Jai', class: 'Learning', location: 'Our place'}
+  
