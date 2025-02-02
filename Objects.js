@@ -70,10 +70,26 @@ console.log(nums); // { d: 0, a: 1, c: 6, b: 10 }
 //* this keyword in object function
 
 let data = {
-  naam : "Jai",
-  no : 77,
-  greet : function(){
-    console.log(this); // {naam: 'Jai', greet: ƒ}greet: ƒ ()naam: "Jai"
-  }
-}
+  naam: "Jai",
+  no: 77,
+  greet: function () {
+    console.log(this); // {naam: 'Jai', greet: ƒ}greet: ƒ ()naam: "Jai" no: 77
+  },
+};
 data.greet();
+
+let data1 = {
+  naam: "Jai",
+  greet() {
+    console.log(this); // {naam: 'Jai', greet: ƒ}greet: ƒ ()naam: "Jai"
+  },
+};
+data1.greet();
+
+let data2 = {
+  naam: "Jai",
+  greet: () => {
+    console.log(this); // Window {0: global, window: Window, self: Window, document: document, name: '', location: Location, …}
+  },
+};
+data2.greet();

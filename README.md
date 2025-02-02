@@ -20,4 +20,6 @@ stringrev.js,
 sumFunctions.js,
 var,let,const.js,
 dateObject.js,
-Objects
+Objects,
+pass-by-value and reference,
+this keyword,
