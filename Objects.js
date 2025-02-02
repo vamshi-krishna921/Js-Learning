@@ -93,3 +93,16 @@ let data2 = {
   },
 };
 data2.greet();
+
+//* Object.hasOwnProperty()
+console.log(data.hasOwnProperty("naam")); // true
+console.log(data.hasOwnProperty("branch")); // false
+
+//* Object.freeze()
+Object.freeze(data);
+data.naam = "Krishna";
+console.log(data);
+
+//* Delete an key-value in Object
+delete data.naam;
+console.log(data); // {no: 77, greet: ƒ}
