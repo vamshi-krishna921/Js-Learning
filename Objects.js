@@ -66,3 +66,14 @@ nums = Object.entries(nums)
   }, {});
 
 console.log(nums); // { d: 0, a: 1, c: 6, b: 10 }
+
+//* this keyword in object function
+
+let data = {
+  naam : "Jai",
+  no : 77,
+  greet : function(){
+    console.log(this); // {naam: 'Jai', greet: ƒ}greet: ƒ ()naam: "Jai"
+  }
+}
+data.greet();
