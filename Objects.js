@@ -106,3 +106,28 @@ console.log(data);
 //* Delete an key-value in Object
 delete data.naam;
 console.log(data); // {no: 77, greet: ƒ}
+
+//! Questions
+//TODO 1: Given an object representing a student, write a function to add a new subject with its corresponding grade to the student 's record. Also check if the grades property is present or not?
+
+let qData = {
+  Name: "Krishna",
+  rollNo: 992,
+  grade: {
+    Chem: 55,
+    EWS: 88,
+    Maths: 99,
+  },
+};
+
+const addToGrade = (Data, subject, marks) => {
+  if(Data.grade === null){
+    Data.grade = {};
+  }
+  //* return Data.grade.subject = marks; //*{ Name: 'Krishna', rollNo: 992, grade: { Chem: 55, EWS: 88, Maths: 99, subject: 92 }}
+
+  return Data.grade[subject] = marks; // { Name: 'Krishna', rollNo: 992, grade: { Chem: 55, EWS: 88, Maths: 99, SE: 92 }}
+
+};
+addToGrade(qData, "SE", 92);
+console.log(qData);
