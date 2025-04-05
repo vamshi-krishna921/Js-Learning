@@ -73,3 +73,10 @@ let min = array2.reduce((min, el) => {
   else return min;
 });
 console.log(min); // 2
+
+//TODO Destructuring 
+let names = ['Jai','Sree','Ram'];
+let [winner,runner] = names;
+console.log(winner,runner); // Jai Sree
+let [secondrunner ,...others] = names;
+console.log(secondrunner ,others); // Jai [ 'Sree', 'Ram' ]

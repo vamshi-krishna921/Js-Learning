@@ -121,13 +121,30 @@ let qData = {
 };
 
 const addToGrade = (Data, subject, marks) => {
-  if(Data.grade === null){
+  if (Data.grade === null) {
     Data.grade = {};
   }
   //* return Data.grade.subject = marks; //*{ Name: 'Krishna', rollNo: 992, grade: { Chem: 55, EWS: 88, Maths: 99, subject: 92 }}
 
-  return Data.grade[subject] = marks; // { Name: 'Krishna', rollNo: 992, grade: { Chem: 55, EWS: 88, Maths: 99, SE: 92 }}
-
+  return (Data.grade[subject] = marks); // { Name: 'Krishna', rollNo: 992, grade: { Chem: 55, EWS: 88, Maths: 99, SE: 92 }}
 };
 addToGrade(qData, "SE", 92);
 console.log(qData);
+
+//TODO Destructing objects
+let student = {
+  name: "vk",
+  age: 14,
+  class: 9,
+  subjects: ["Hindi", "English", "Math", "Science"],
+  username: "vk123",
+  password: 1234,
+};
+let { username, password } = student;
+console.log(username, password); //vk123 1234
+//* Changing the oldKey to newKey
+let { username: user, password: secretKey } = student;
+console.log(user, secretKey); //vk123 1234
+//* Adding new key and values
+let { city = "Knr" } = student;
+console.log(city); //Knr
