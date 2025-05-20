@@ -21,6 +21,6 @@ one();
 This is 1st fn end
 This is 2nd fn end.
 This is 3rd fn end
-3rd starting
-2nd starting
+3rd starting (After 1 sec)
+2nd starting (After 2 secs)
 */
