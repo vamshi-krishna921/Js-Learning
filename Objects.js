@@ -148,3 +148,17 @@ console.log(user, secretKey); //vk123 1234
 //* Adding new key and values
 let { city = "Knr" } = student;
 console.log(city); //Knr
+
+//* object.fromEntries()
+let persons = [
+  ["naam", "Ganesh"],
+  ["name", "Jai"],
+];
+console.log(typeof persons); // object
+persons = Object.fromEntries(persons);
+console.log(persons); // { naam: 'Ganesh', name: 'Jai' }
+let persons2 = { naam: "Ganesh", name: "jai" };
+persons2 = Object.entries(persons2);
+console.log(persons2); // [ [ 'naam', 'Ganesh' ], [ 'name', 'jai' ] ]
+persons2 = Object.fromEntries(persons2);
+console.log(persons2); // { naam: 'Ganesh', name: 'jai' }
