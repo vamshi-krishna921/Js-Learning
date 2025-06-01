@@ -208,3 +208,10 @@ const isPangram = (str )=> {
 }
 
 console.log(isPangram(pangramText)); // true
+
+//TODO replaceAll()
+//  Replace all spaces with single space.
+let org = "   This is     spaced       String";
+let newOrg = org.replaceAll(/\s+/g," ");
+console.log(newOrg); //  This is spaced String
+
