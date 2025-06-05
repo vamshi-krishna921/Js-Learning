@@ -80,3 +80,21 @@ let [winner,runner] = names;
 console.log(winner,runner); // Jai Sree
 let [secondrunner ,...others] = names;
 console.log(secondrunner ,others); // Jai [ 'Sree', 'Ram' ]
+
+//TODO toReversed() to reverse an array.
+
+let orgArray = ["I", "am", "the", "best"];
+let newArray = orgArray.toReversed();
+console.log(newArray); // [ 'best', 'the', 'am', 'I' ]
+
+//TODO toSorted() to sort an array.
+let sortedArr = orgArray.toSorted();
+console.log(sortedArr);
+
+//TODO toSpliced() to copy an array and used to remove / replace the elem's in it.
+let splicedArr = orgArray.toSpliced(3,1,"GOAT");
+console.log(slicedArr); // [ 'I', 'am', 'the', 'GOAT' ]
+
+//TODO with() is used to replace an elem using index
+let withArray = orgArray.with(3, "student");
+console.log(withArray); // [ 'I', 'am', 'the', 'student' ]

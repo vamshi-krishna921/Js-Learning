@@ -214,4 +214,3 @@ console.log(isPangram(pangramText)); // true
 let org = "   This is     spaced       String";
 let newOrg = org.replaceAll(/\s+/g," ");
 console.log(newOrg); //  This is spaced String
-
